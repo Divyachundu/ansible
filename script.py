@@ -70,7 +70,6 @@ for i in newval:
 	proc3 = subprocess.Popen(cmd3, stdin=proc2.stdout, stdout=subprocess.PIPE)
 	cmd4 = ["tr", "-d", "%"]
 	proc4 = subprocess.Popen(cmd4, stdin=proc3.stdout, stdout=subprocess.PIPE)
-	#fullcmd_output = subprocess.check_output("df -h | grep /dev/sda1 | awk '{print $5}'| tr -d '%'", 		shell=True)
 	(out, err) = proc4.communicate()
 	print (out)
 	#fullcmd_output = os.system("")
